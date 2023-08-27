@@ -1,6 +1,6 @@
 # Inscriptions Smart Contract
 
-[![Inscriptions ASCII Art](https://textart4u.blogspot.com/2012/08/joker-face-ascii-text-art.html)]
+
 > The Inscriptions contract is designed to manage race registrations, payments, and various functionalities around it.
 
 ## Table of Contents
