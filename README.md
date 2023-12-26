@@ -1,73 +1,66 @@
-# Inscriptions Smart Contract
+## Foundry
 
+**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
 
-> The Inscriptions contract is designed to manage race registrations, payments, and various functionalities around it.
+Foundry consists of:
 
-## Table of Contents
+-   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
+-   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
+-   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
+-   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
 
-- [Getting Started](#getting-started)
-- [Prerequisites](#prerequisites)
-- [Deployment](#deployment)
-- [Functions](#functions)
-- [Constant Variables](#constant-variables)
-- [State Variables](#state-variables)
-- [Errors](#errors)
-- [Authors](#authors)
-- [License](#license)
+## Documentation
 
-## Getting Started
+https://book.getfoundry.sh/
 
-To clone and run this application, you'll need [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/download/) and [Hardhat](https://hardhat.org/getting-started/#overview) installed on your computer. From your command line:
+## Usage
 
-```bash
-# Clone this repository
-$ git clone <repository_link>
+### Build
 
-# Go into the repository
-$ cd <repository_name>
+```shell
+$ forge build
+```
 
-# Install dependencies
-$ npm install
-Prerequisites
-Solidity ^0.8.9
-Hardhat
-Node.js and npm
-Deployment
-To deploy this contract, use Hardhat:
+### Test
 
-bash
-Copy code
-npx hardhat run scripts/deploy.js --network <network-name>
-Functions
-Register
-Allows users to register for a race. Requires the payment fee to be paid first.
+```shell
+$ forge test
+```
 
-Pay
-Allows users to pay the race fee. The fee varies depending on age.
+### Format
 
-receive
-Fallback receive function for receiving Ether.
+```shell
+$ forge fmt
+```
 
-fallback
-Fallback function for the contract.
+### Gas Snapshots
 
-Constant Variables
-REQUIRED_ETHER
-REQUIRED_ETHER_DISCOUNT
-State Variables
-isRegistered
-isMinor
-hasPaid
+```shell
+$ forge snapshot
+```
 
-Enums
-RaceType
+### Anvil
 
-Errors
-ErrorTerminate
-Unauthorized
+```shell
+$ anvil
+```
 
-Authors
-FrostX.eth
+### Deploy
 
-License
-This project is licensed under the MIT License.
+```shell
+$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
+```
+
+### Cast
+
+```shell
+$ cast <subcommand>
+```
+
+### Help
+
+```shell
+$ forge --help
+$ anvil --help
+$ cast --help
+```
