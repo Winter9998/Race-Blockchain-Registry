@@ -1,0 +1,2 @@
+InscriptionsTesting:testUserCannotRegisterTwoTimes() (gas: 254485)
+InscriptionsTesting:test_RegistrationSuccessAndReturnsUint() (gas: 246837)

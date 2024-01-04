@@ -39,19 +39,24 @@ contract RaceMarathon {
     Race4
     }
 
+    event RunnerRegistered( 
+        string _name,
+        uint _age,
+        bool _license,
+        uint _typeRace
+        );
+
     mapping (address => bool) public isRegistered;
     Runner[] public runners;
     uint public raceIndex;
     uint public runnersNumber = 0;
-    uint public constant REQUIRED_ETHER = 2 ether;
-    uint public constant REQUIRED_ETHER_DISCOUNT =  1.5 ether; /// @dev Discount for minors.
+    uint public immutable REQUIRED_ETHER = 2 ether;
+    uint public immutable REQUIRED_ETHER_DISCOUNT =  1.5 ether; /// @dev Discount for minors.
     RaceType public raceType;
 
     /// @dev Receive and fallback function to accept incoming payments.
     receive() external payable {}
     fallback() external payable {}
-
-
 
     /// @notice Function to register a new runner.
     /// @param _name The name of the runner.
@@ -59,21 +64,31 @@ contract RaceMarathon {
     /// @param _license Whether the runner has a license.
     /// @param _typeRace The type of race the runner is registering for.
     /// @return The total number of registered runners.
-    function Register(string memory _name, uint _age, bool _license, uint _typeRace) payable public returns(uint){
-    if (_age < 18 ){ if (msg.value != REQUIRED_ETHER_DISCOUNT) revert DepositMinorUnsuccessful(_age);
-    } else { if (msg.value != REQUIRED_ETHER) revert DepositMinorUnsuccessful(_age);}
+    function Register(
+        string memory _name,
+        uint _age,
+        bool _license,
+        uint _typeRace
+        ) public payable returns(uint){
+    
+    require(!isRegistered[msg.sender], "Cannot register a second time");
+
+    if (_age < 18 ){ 
+        if (msg.value != REQUIRED_ETHER_DISCOUNT) revert DepositMinorUnsuccessful(_age);
+    } else {
+        if (msg.value != REQUIRED_ETHER) revert DepositMinorUnsuccessful(_age);}
 
     // Convert _typeRace to the corresponding enum value based on its integer value
-    if (_typeRace == 1) {
+    if (_typeRace == 1){
         raceType = RaceType.Race1;
         raceIndex = 10;
-    } else if (_typeRace == 2) {
+    } else if (_typeRace == 2){
         raceType = RaceType.Race2;
         raceIndex = 12;
-    } else if (_typeRace == 3) {
+    } else if (_typeRace == 3){
         raceType = RaceType.Race3;
         raceIndex = 21;
-    } else if (_typeRace == 4) {
+    } else if (_typeRace == 4){
         raceType = RaceType.Race4;
         raceIndex = 42;
     } else {
@@ -84,7 +99,9 @@ contract RaceMarathon {
     isRegistered[msg.sender] = true;
 
     runnersNumber++;
+    emit RunnerRegistered(_name, _age, _license, _typeRace);
     return runnersNumber;
-
     }
+
+
 }

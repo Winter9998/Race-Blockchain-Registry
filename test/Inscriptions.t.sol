@@ -10,7 +10,7 @@ contract InscriptionsTesting is Test {
 
     RaceMarathon marathon;
     address fuzz1 = makeAddr("AM");
-    string public DEFAULT_NAME = "John Marston";
+    string public DEFAULT_NAME = "Arthur Morgan";
     function setUp() public {
         marathon = new RaceMarathon();
         vm.deal(fuzz1, 100 ether);
@@ -20,5 +20,12 @@ contract InscriptionsTesting is Test {
         vm.prank(fuzz1);
         marathon.Register{value : 2 ether}(DEFAULT_NAME, 19, true, 2);
         assertEq(marathon.isRegistered(fuzz1), true);
+    }
+
+    function testUserCannotRegisterTwoTimes() public {
+        vm.startPrank(fuzz1);
+        marathon.Register{value : 2 ether}(DEFAULT_NAME, 19, true, 2);
+        vm.expectRevert();
+        marathon.Register{value : 2 ether}(DEFAULT_NAME, 19, true, 2);
     }
 }
