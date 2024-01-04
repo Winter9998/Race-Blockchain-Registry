@@ -20,7 +20,6 @@ error DepositMinorUnsuccessful(uint personAge);
 /// @dev Contract to manage runner registrations for various races. 
 /// @author FrostX.eth
 contract RaceMarathon {
-    
 
     /// @dev Data structure to store information about a runner.
     struct Runner {
@@ -47,6 +46,10 @@ contract RaceMarathon {
     uint public constant REQUIRED_ETHER = 2 ether;
     uint public constant REQUIRED_ETHER_DISCOUNT =  1.5 ether; /// @dev Discount for minors.
     RaceType public raceType;
+
+    /// @dev Receive and fallback function to accept incoming payments.
+    receive() external payable {}
+    fallback() external payable {}
 
 
 
@@ -84,16 +87,4 @@ contract RaceMarathon {
     return runnersNumber;
 
     }
-
-
-
-
-
-
-
-
-    /// @dev Receive and fallback function to accept incoming payments.
-    receive() external payable {}
-    fallback() external payable {}
-
 }
