@@ -20,23 +20,21 @@ error DepositMinorUnsuccessful(uint personAge);
 /// @dev Contract to manage runner registrations for various races. 
 /// @author FrostX.eth
 contract RaceMarathon {
-
     /// @dev Data structure to store information about a runner.
     struct Runner {
     string name;
     uint age;
     bool license;
     RaceType raceType;
-    uint raceIndex;
-    address addr;
+    uint runnerNumber;
     }
 
     /// @dev Enumeration for different types of races.
     enum RaceType {
-    Race1,
-    Race2,
-    Race3,
-    Race4
+    Race10,
+    Race12,
+    Race21,
+    Race42
     }
 
     event RunnerRegistered( 
@@ -47,8 +45,8 @@ contract RaceMarathon {
         );
 
     mapping (address => bool) public isRegistered;
-    Runner[] public runners;
-    uint public raceIndex;
+    mapping (address => uint) public runnerNumber;
+    mapping (address => Runner[]) public runners;
     uint public runnersNumber = 0;
     uint public immutable REQUIRED_ETHER = 2 ether;
     uint public immutable REQUIRED_ETHER_DISCOUNT =  1.5 ether; /// @dev Discount for minors.
@@ -80,27 +78,32 @@ contract RaceMarathon {
 
     // Convert _typeRace to the corresponding enum value based on its integer value
     if (_typeRace == 1){
-        raceType = RaceType.Race1;
-        raceIndex = 10;
+        raceType = RaceType.Race10;
     } else if (_typeRace == 2){
-        raceType = RaceType.Race2;
-        raceIndex = 12;
+        raceType = RaceType.Race12;
     } else if (_typeRace == 3){
-        raceType = RaceType.Race3;
-        raceIndex = 21;
+        raceType = RaceType.Race21;
     } else if (_typeRace == 4){
-        raceType = RaceType.Race4;
-        raceIndex = 42;
+        raceType = RaceType.Race42;
     } else {
         revert();
     }
 
-    runners.push(Runner(_name, _age, _license, raceType, raceIndex, msg.sender));
-    isRegistered[msg.sender] = true;
+    Runner memory newRunner = Runner(_name, _age, _license, raceType, runnersNumber);
+    runners[msg.sender].push(newRunner);
 
     runnersNumber++;
+    runnerNumber[msg.sender] = runnersNumber;
+    isRegistered[msg.sender] = true;
+    
     emit RunnerRegistered(_name, _age, _license, _typeRace);
     return runnersNumber;
+    }
+
+    function cancelRace() public {
+        require(isRegistered[msg.sender], "Unable to process Cancellation");
+        delete runners[msg.sender];
+        delete isRegistered[msg.sender];
     }
 
 
