@@ -1,0 +1,802 @@
+{
+    "contractName": "Interactions",
+    "abi": [
+        {
+            "inputs": [],
+            "name": "IS_SCRIPT",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "getFee",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "run",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "setUp",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        }
+    ],
+    "metadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"IS_SCRIPT\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getFee\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"run\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"setUp\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"c:/Users/miste/Documents/Programming/Smart_Contracts/Ethereum/Solidity/projects/DecentralizedRaceRegister/script/Interactions.s.sol\":\"Interactions\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"c:/Users/miste/Documents/Programming/Smart_Contracts/Ethereum/Solidity/projects/DecentralizedRaceRegister/lib/forge-std/src/Base.sol\":{\"keccak256\":\"0x4ff1a785311017d1eedb1b4737956fa383067ad34eb439abfec1d989754dde1c\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f553622969b9fdb930246704a4c10dfaee6b1a4468c142fa7eb9dc292a438224\",\"dweb:/ipfs/QmcxqHnqdQsMVtgsfH9VNLmZ3g7GhgNagfq7yvNCDcCHFK\"]},\"c:/Users/miste/Documents/Programming/Smart_Contracts/Ethereum/Solidity/projects/DecentralizedRaceRegister/lib/forge-std/src/Script.sol\":{\"keccak256\":\"0x2315be74cc2826f9da401bea3da46a10ad6a6efdf73176d79160b453286d0ed2\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://af0d4dc826911d6cb4d6272ed5cbdb6950e1476141cca328e178b808d848789c\",\"dweb:/ipfs/QmV2ytjUEkV84VtdMs1nZqQTBoVE987cHboQMpiha5yo3e\"]},\"c:/Users/miste/Documents/Programming/Smart_Contracts/Ethereum/Solidity/projects/DecentralizedRaceRegister/lib/forge-std/src/StdChains.sol\":{\"keccak256\":\"0x1419991b2a8eb2de79b9bd2b3c5a0ceb5d7636ab9bcddde0b71701fd6ad47273\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7afc962ec6e60e1ff749cd0d4c671bc3b85386c68d26b824d4a6c6e6e8255e85\",\"dweb:/ipfs/QmWwfj6Qk8QBcnGD45seGnDXtUmC9CYKuPNJCApSjLyPSj\"]},\"c:/Users/miste/Documents/Programming/Smart_Contracts/Ethereum/Solidity/projects/DecentralizedRaceRegister/lib/forge-std/src/StdCheats.sol\":{\"keccak256\":\"0xb72f3519e0bf7d31df5d68557525f4fc55d861c3fb3b0f7793144ef7c94cbeb7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f3456d0f78e6f61203fa7871ba2df0d35925f10db3baee14be623ce2a35b84e2\",\"dweb:/ipfs/QmWE6QQSBvJifHMraisBTrf1x4WCwrDoTPLX8UKajTiApc\"]},\"c:/Users/miste/Documents/Programming/Smart_Contracts/Ethereum/Solidity/projects/DecentralizedRaceRegister/lib/forge-std/src/StdJson.sol\":{\"keccak256\":\"0x8f914dbd016bd0e318fe2b8bd556fbc8256c7cddc24e3e4fcb9f3c1c1935592d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://19e704df493dde38323303b07d18cadfeb4dcadf1ddc2301add4aea9474fbb5e\",\"dweb:/ipfs/QmZasuGiLK8LHwWtvpqEBxUR6QFY6GdzLMTJ9q7CMf8PNZ\"]},\"c:/Users/miste/Documents/Programming/Smart_Contracts/Ethereum/Solidity/projects/DecentralizedRaceRegister/lib/forge-std/src/StdMath.sol\":{\"keccak256\":\"0xd90ad4fd8aeaeb8929964e686e769fdedd5eded3fc3815df194a0ab9f91a3fb2\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7919b70f636c7b805223992f28ad1ad0145d6c1385b5931a3589aface5fe6c92\",\"dweb:/ipfs/QmY7FRaULwoGgFteF8GawjQJRfasNgpWnU2aiMsFrYpuTC\"]},\"c:/Users/miste/Documents/Programming/Smart_Contracts/Ethereum/Solidity/projects/DecentralizedRaceRegister/lib/forge-std/src/StdStorage.sol\":{\"keccak256\":\"0x4298f3f4cedaedb07029820b1daad2c03af45379559392201f7bf3ec71105811\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6e062f36d8d1ae3c383ef8975757926eaa9c4de3a92b5f1fe2d12748bcd8db32\",\"dweb:/ipfs/QmcWkv3ia5Ew4DZNcudMNSTNXZ3W2QiXTZunRd44e9BT8z\"]},\"c:/Users/miste/Documents/Programming/Smart_Contracts/Ethereum/Solidity/projects/DecentralizedRaceRegister/lib/forge-std/src/StdStyle.sol\":{\"keccak256\":\"0x43e2a8a9b9c2574dabe74f11adf6f782df218f463540e3b5b563609fe108597d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://51363ca97404cf4128e1141428949768c31929e75e014b02c85e887fbbb4f1b8\",\"dweb:/ipfs/QmVhtbQc2fU4rRmbcfBtz34mAgG4BAZBsbna1Ca4SkoPsK\"]},\"c:/Users/miste/Documents/Programming/Smart_Contracts/Ethereum/Solidity/projects/DecentralizedRaceRegister/lib/forge-std/src/StdUtils.sol\":{\"keccak256\":\"0x502b18a4becda6ecd91fa8b419d8034946bfa80e6cc7f6497f51f8565bfadae0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://bf499ee483a1dfd02023d4ce78ed4029a49794ccd5b849aaab912faea0d2ba61\",\"dweb:/ipfs/QmP6hwNZW7sYbQK9fBzuZWxfLm6Swx2nKzvZ54qWNqQkzX\"]},\"c:/Users/miste/Documents/Programming/Smart_Contracts/Ethereum/Solidity/projects/DecentralizedRaceRegister/lib/forge-std/src/Vm.sol\":{\"keccak256\":\"0x900efafd1d4e7cff7b0f4f4b0c047a79702533ee58e2b22c49113cec49b7a9be\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7e8a09c3c69d445ce4d96afd73652f06fabc62658025a37284a5f9cce74497f2\",\"dweb:/ipfs/QmeCkRwgx3k51XyqEVk8FntuFYC8auVzqSgtSq1DHiR3KG\"]},\"c:/Users/miste/Documents/Programming/Smart_Contracts/Ethereum/Solidity/projects/DecentralizedRaceRegister/lib/forge-std/src/console.sol\":{\"keccak256\":\"0x91d5413c2434ca58fd278b6e1e79fd98d10c83931cc2596a6038eee4daeb34ba\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://91ccea707361e48b9b7a161fe81f496b9932bc471e9c4e4e1e9c283f2453cc70\",\"dweb:/ipfs/QmcB66sZhQ6Kz7MUHcLE78YXRUZxoZnnxZjN6yATsbB2ec\"]},\"c:/Users/miste/Documents/Programming/Smart_Contracts/Ethereum/Solidity/projects/DecentralizedRaceRegister/lib/forge-std/src/console2.sol\":{\"keccak256\":\"0x954646445d1014c3cd85c7918f5e7adeeca5ee44b68c00bafa237e597a4e35ea\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://516fa3be52da4763147175bfba4be0aa011fadbb0c1afb01f97265bd4cee7973\",\"dweb:/ipfs/QmdixAyMJefx7qePChgdxcBH5MxhmN7vsqPuPLx3CgrVmF\"]},\"c:/Users/miste/Documents/Programming/Smart_Contracts/Ethereum/Solidity/projects/DecentralizedRaceRegister/lib/forge-std/src/interfaces/IMulticall3.sol\":{\"keccak256\":\"0x7aac1389150499a922d1f9ef5749c908cef127cb2075b92fa17e9cb611263d0a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d95ebb7c7c463e08ebc12dab639945752fb2480acfc6e86da32f72732a7fd0c0\",\"dweb:/ipfs/QmNXK8P8oPWwajsQHvAHw3JPyQidPLCGQN3hWu1Lk6PBL2\"]},\"c:/Users/miste/Documents/Programming/Smart_Contracts/Ethereum/Solidity/projects/DecentralizedRaceRegister/lib/forge-std/src/mocks/MockERC20.sol\":{\"keccak256\":\"0xd8703f49411737ecf8d411f8fa66b2bf0ef972ba28b7a4adf1748c63df1bf682\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b7c10a6b8112f6fe3cdccb6240ecd382765216b1a82e9a86a0fec8f5e09eadd1\",\"dweb:/ipfs/QmdRvPCU4RkjMHsTu3Ric1ZEF1AWDNLp78unFC5aWP17xq\"]},\"c:/Users/miste/Documents/Programming/Smart_Contracts/Ethereum/Solidity/projects/DecentralizedRaceRegister/lib/forge-std/src/mocks/MockERC721.sol\":{\"keccak256\":\"0xa24468244abb66e663fb7eee6463cb518eb9a7c14e1071548ff564cca825bbca\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://145585a2194aa6e2d30edfe709ef2814e20b1b4540469aa6a8f50c841fcb9070\",\"dweb:/ipfs/QmZrwbvtpbtTxqbW5phUrwb3F1tBiPSQc6jZJAXBfsBsAh\"]},\"c:/Users/miste/Documents/Programming/Smart_Contracts/Ethereum/Solidity/projects/DecentralizedRaceRegister/lib/forge-std/src/safeconsole.sol\":{\"keccak256\":\"0xbaf41fdc6c54297e7cd8250e48b0f20eaac918e342a1028cef3f9a52ac086381\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a500ad81dea226f9910e6b50f99a9ff930105e393a692cbfb2185e4cdb4424ae\",\"dweb:/ipfs/QmVbUQpXNMmMWRiy4FvBNczzq46BMGfUoBikvSHNiCxVTq\"]},\"c:/Users/miste/Documents/Programming/Smart_Contracts/Ethereum/Solidity/projects/DecentralizedRaceRegister/script/Interactions.s.sol\":{\"keccak256\":\"0x8aeda982ad55e2ed854982c0d4c4c85a498f27d6141d024fedcad1a18c9a648d\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://ae47acae6cf4008d94f729f57e2f9b1be235c85cc73962746463f33cbd874c6f\",\"dweb:/ipfs/QmRUz15tsEsBrJXj936LcHCvi4KniNHW3gDive97X1CN3Y\"]},\"c:/Users/miste/Documents/Programming/Smart_Contracts/Ethereum/Solidity/projects/DecentralizedRaceRegister/src/RaceMarathon.sol\":{\"keccak256\":\"0x8644c9508403c1405b68115c4f79dec48fa90aa86712d0b6a0c07e1b2e06d185\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://0dc7693389daaac32b6d409d72894c6d88da303f8fe734fe70660722c1bcea67\",\"dweb:/ipfs/QmaQ3ExqKvs6hARr8NFBXcmKtTFFbKG9PG5cZSHWLPMmca\"]}},\"version\":1}",
+    "bytecode": "6080604052600b805462ff00ff19166201000117905534801561002157600080fd5b50610302806100316000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c80630a9254e414610051578063c040622614610081578063ced72f8714610089578063f8ccbf4714610091575b600080fd5b600b80546301000000600160b81b031916765fbdb2315678afecb367f032d93f642f64180aa3000000179055005b005b61007f6100b8565b61007f6100c2565b600b546100a49062010000900460ff1681565b604051901515815260200160405180910390f35b6100c06100c2565b565b7f885cb69240a935d632d79c317109709ecfa91a80626ff3989d68f67f5b1dd12d60001c6001600160a01b0316637fb5297f6040518163ffffffff1660e01b8152600401600060405180830381600087803b15801561012057600080fd5b505af1158015610134573d6000803e3d6000fd5b5050600b5460405163c8c3194360e01b8152602060048201526008602482015267111a5cd8dbdd5b9d60c21b60448201526000935063010000009091046001600160a01b0316915063c8c3194390606401602060405180830381865afa1580156101a2573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906101c691906102b3565b90506101d18161024a565b7f885cb69240a935d632d79c317109709ecfa91a80626ff3989d68f67f5b1dd12d60001c6001600160a01b03166376eadd366040518163ffffffff1660e01b8152600401600060405180830381600087803b15801561022f57600080fd5b505af1158015610243573d6000803e3d6000fd5b5050505050565b61028f8160405160240161026091815260200190565b60408051601f198184030181529190526020810180516001600160e01b031663f5b1bba960e01b179052610292565b50565b80516a636f6e736f6c652e6c6f67602083016000808483855afa5050505050565b6000602082840312156102c557600080fd5b505191905056fea26469706673582212205650158df6582987652abb33d916170baa6244bae892c7d47fee839d1d61c1ee64736f6c63430008130033",
+    "deployedBytecode": "608060405234801561001057600080fd5b506004361061004c5760003560e01c80630a9254e414610051578063c040622614610081578063ced72f8714610089578063f8ccbf4714610091575b600080fd5b600b80546301000000600160b81b031916765fbdb2315678afecb367f032d93f642f64180aa3000000179055005b005b61007f6100b8565b61007f6100c2565b600b546100a49062010000900460ff1681565b604051901515815260200160405180910390f35b6100c06100c2565b565b7f885cb69240a935d632d79c317109709ecfa91a80626ff3989d68f67f5b1dd12d60001c6001600160a01b0316637fb5297f6040518163ffffffff1660e01b8152600401600060405180830381600087803b15801561012057600080fd5b505af1158015610134573d6000803e3d6000fd5b5050600b5460405163c8c3194360e01b8152602060048201526008602482015267111a5cd8dbdd5b9d60c21b60448201526000935063010000009091046001600160a01b0316915063c8c3194390606401602060405180830381865afa1580156101a2573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906101c691906102b3565b90506101d18161024a565b7f885cb69240a935d632d79c317109709ecfa91a80626ff3989d68f67f5b1dd12d60001c6001600160a01b03166376eadd366040518163ffffffff1660e01b8152600401600060405180830381600087803b15801561022f57600080fd5b505af1158015610243573d6000803e3d6000fd5b5050505050565b61028f8160405160240161026091815260200190565b60408051601f198184030181529190526020810180516001600160e01b031663f5b1bba960e01b179052610292565b50565b80516a636f6e736f6c652e6c6f67602083016000808483855afa5050505050565b6000602082840312156102c557600080fd5b505191905056fea26469706673582212205650158df6582987652abb33d916170baa6244bae892c7d47fee839d1d61c1ee64736f6c63430008130033",
+    "sourceMap": "422:604:16:-:0;;;3126:44:2;;;-1:-1:-1;;800:28:1;;;;;422:604:16;;;;;;;;;;;;;;;;",
+    "deployedSourceMap": "422:604:16:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;491:119;526:8;:76;;-1:-1:-1;;;;;;526:76:16;;;;;491:119;;;622:49;;;:::i;679:179::-;;;:::i;800:28:1:-;;;;;;;;;;;;;;;179:14:18;;172:22;154:41;;142:2;127:18;800:28:1;;;;;;;622:49:16;655:8;:6;:8::i;:::-;622:49::o;679:179::-;317:28:0;309:37;;-1:-1:-1;;;;;715:17:16;;:19;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;759:8:16;;:35;;-1:-1:-1;;;759:35:16;;408:2:18;759:35:16;;;390:21:18;447:1;427:18;;;420:29;-1:-1:-1;;;465:18:18;;;458:38;745:11:16;;-1:-1:-1;759:8:16;;;;-1:-1:-1;;;;;759:8:16;;-1:-1:-1;759:23:16;;513:18:18;;759:35:16;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;745:49;;805:16;817:3;805:11;:16::i;:::-;317:28:0;309:37;;-1:-1:-1;;;;;832:16:16;;:18;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;704:154;679:179::o;5514:110:10:-;5560:57;5613:2;5576:40;;;;;;877:25:18;;865:2;850:18;;731:177;5576:40:10;;;;-1:-1:-1;;5576:40:10;;;;;;;;;;;;;;-1:-1:-1;;;;;5576:40:10;-1:-1:-1;;;5576:40:10;;;5560:15;:57::i;:::-;5514:110;:::o;181:376::-;275:14;;131:42;448:2;435:16;;251:21;;275:14;435:16;131:42;484:5;473:68;464:77;;401:150;;181:376;:::o;542:184:18:-;612:6;665:2;653:9;644:7;640:23;636:32;633:52;;;681:1;678;671:12;633:52;-1:-1:-1;704:16:18;;542:184;-1:-1:-1;542:184:18:o",
+    "sourcePath": "c:/Users/miste/Documents/Programming/Smart_Contracts/Ethereum/Solidity/projects/DecentralizedRaceRegister/script/Interactions.s.sol",
+    "compiler": {
+        "name": "solc",
+        "version": "0.8.19+commit.7dd6d404"
+    },
+    "ast": {
+        "absolutePath": "c:/Users/miste/Documents/Programming/Smart_Contracts/Ethereum/Solidity/projects/DecentralizedRaceRegister/script/Interactions.s.sol",
+        "exportedSymbols": {
+            "DepositMinorUnsuccessful": [
+                40606
+            ],
+            "ErrorTerminate": [
+                40600
+            ],
+            "Interactions": [
+                40593
+            ],
+            "RaceMarathon": [
+                40924
+            ],
+            "Script": [
+                113
+            ],
+            "Unauthorized": [
+                40602
+            ],
+            "console": [
+                18068
+            ],
+            "console2": [
+                26193
+            ]
+        },
+        "id": 40594,
+        "license": "UNLICENSED",
+        "nodeType": "SourceUnit",
+        "nodes": [
+            {
+                "id": 40535,
+                "literals": [
+                    "solidity",
+                    "^",
+                    "0.8",
+                    ".15"
+                ],
+                "nodeType": "PragmaDirective",
+                "src": "40:24:16"
+            },
+            {
+                "absolutePath": "c:/Users/miste/Documents/Programming/Smart_Contracts/Ethereum/Solidity/projects/DecentralizedRaceRegister/lib/forge-std/src/Script.sol",
+                "file": "c:/Users/miste/Documents/Programming/Smart_Contracts/Ethereum/Solidity/projects/DecentralizedRaceRegister/lib/forge-std/src/Script.sol",
+                "id": 40538,
+                "nameLocation": "-1:-1:-1",
+                "nodeType": "ImportDirective",
+                "scope": 40594,
+                "sourceUnit": 114,
+                "src": "68:168:16",
+                "symbolAliases": [
+                    {
+                        "foreign": {
+                            "id": 40536,
+                            "name": "Script",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 113,
+                            "src": "76:6:16",
+                            "typeDescriptions": {}
+                        },
+                        "nameLocation": "-1:-1:-1"
+                    },
+                    {
+                        "foreign": {
+                            "id": 40537,
+                            "name": "console2",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 26193,
+                            "src": "84:8:16",
+                            "typeDescriptions": {}
+                        },
+                        "nameLocation": "-1:-1:-1"
+                    }
+                ],
+                "unitAlias": ""
+            },
+            {
+                "absolutePath": "c:/Users/miste/Documents/Programming/Smart_Contracts/Ethereum/Solidity/projects/DecentralizedRaceRegister/lib/forge-std/src/console.sol",
+                "file": "c:/Users/miste/Documents/Programming/Smart_Contracts/Ethereum/Solidity/projects/DecentralizedRaceRegister/lib/forge-std/src/console.sol",
+                "id": 40539,
+                "nameLocation": "-1:-1:-1",
+                "nodeType": "ImportDirective",
+                "scope": 40594,
+                "sourceUnit": 18069,
+                "src": "238:145:16",
+                "symbolAliases": [],
+                "unitAlias": ""
+            },
+            {
+                "absolutePath": "c:/Users/miste/Documents/Programming/Smart_Contracts/Ethereum/Solidity/projects/DecentralizedRaceRegister/src/RaceMarathon.sol",
+                "file": "../src/RaceMarathon.sol",
+                "id": 40540,
+                "nameLocation": "-1:-1:-1",
+                "nodeType": "ImportDirective",
+                "scope": 40594,
+                "sourceUnit": 40925,
+                "src": "385:33:16",
+                "symbolAliases": [],
+                "unitAlias": ""
+            },
+            {
+                "abstract": false,
+                "baseContracts": [
+                    {
+                        "baseName": {
+                            "id": 40541,
+                            "name": "Script",
+                            "nameLocations": [
+                                "447:6:16"
+                            ],
+                            "nodeType": "IdentifierPath",
+                            "referencedDeclaration": 113,
+                            "src": "447:6:16"
+                        },
+                        "id": 40542,
+                        "nodeType": "InheritanceSpecifier",
+                        "src": "447:6:16"
+                    }
+                ],
+                "canonicalName": "Interactions",
+                "contractDependencies": [],
+                "contractKind": "contract",
+                "fullyImplemented": true,
+                "id": 40593,
+                "linearizedBaseContracts": [
+                    40593,
+                    113,
+                    8132,
+                    2937,
+                    877,
+                    74,
+                    62
+                ],
+                "name": "Interactions",
+                "nameLocation": "431:12:16",
+                "nodeType": "ContractDefinition",
+                "nodes": [
+                    {
+                        "constant": false,
+                        "id": 40545,
+                        "mutability": "mutable",
+                        "name": "marathon",
+                        "nameLocation": "474:8:16",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 40593,
+                        "src": "461:21:16",
+                        "stateVariable": true,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_RaceMarathon_$40924",
+                            "typeString": "contract RaceMarathon"
+                        },
+                        "typeName": {
+                            "id": 40544,
+                            "nodeType": "UserDefinedTypeName",
+                            "pathNode": {
+                                "id": 40543,
+                                "name": "RaceMarathon",
+                                "nameLocations": [
+                                    "461:12:16"
+                                ],
+                                "nodeType": "IdentifierPath",
+                                "referencedDeclaration": 40924,
+                                "src": "461:12:16"
+                            },
+                            "referencedDeclaration": 40924,
+                            "src": "461:12:16",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_RaceMarathon_$40924",
+                                "typeString": "contract RaceMarathon"
+                            }
+                        },
+                        "visibility": "internal"
+                    },
+                    {
+                        "body": {
+                            "id": 40557,
+                            "nodeType": "Block",
+                            "src": "515:95:16",
+                            "statements": [
+                                {
+                                    "expression": {
+                                        "id": 40555,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "leftHandSide": {
+                                            "id": 40548,
+                                            "name": "marathon",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 40545,
+                                            "src": "526:8:16",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_contract$_RaceMarathon_$40924",
+                                                "typeString": "contract RaceMarathon"
+                                            }
+                                        },
+                                        "nodeType": "Assignment",
+                                        "operator": "=",
+                                        "rightHandSide": {
+                                            "arguments": [
+                                                {
+                                                    "arguments": [
+                                                        {
+                                                            "hexValue": "307835466244423233313536373861666563623336376630333264393346363432663634313830616133",
+                                                            "id": 40552,
+                                                            "isConstant": false,
+                                                            "isLValue": false,
+                                                            "isPure": true,
+                                                            "kind": "number",
+                                                            "lValueRequested": false,
+                                                            "nodeType": "Literal",
+                                                            "src": "558:42:16",
+                                                            "typeDescriptions": {
+                                                                "typeIdentifier": "t_address",
+                                                                "typeString": "address"
+                                                            },
+                                                            "value": "0x5FbDB2315678afecb367f032d93F642f64180aa3"
+                                                        }
+                                                    ],
+                                                    "expression": {
+                                                        "argumentTypes": [
+                                                            {
+                                                                "typeIdentifier": "t_address",
+                                                                "typeString": "address"
+                                                            }
+                                                        ],
+                                                        "id": 40551,
+                                                        "isConstant": false,
+                                                        "isLValue": false,
+                                                        "isPure": true,
+                                                        "lValueRequested": false,
+                                                        "nodeType": "ElementaryTypeNameExpression",
+                                                        "src": "550:8:16",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_type$_t_address_payable_$",
+                                                            "typeString": "type(address payable)"
+                                                        },
+                                                        "typeName": {
+                                                            "id": 40550,
+                                                            "name": "address",
+                                                            "nodeType": "ElementaryTypeName",
+                                                            "src": "550:8:16",
+                                                            "stateMutability": "payable",
+                                                            "typeDescriptions": {}
+                                                        }
+                                                    },
+                                                    "id": 40553,
+                                                    "isConstant": false,
+                                                    "isLValue": false,
+                                                    "isPure": true,
+                                                    "kind": "typeConversion",
+                                                    "lValueRequested": false,
+                                                    "nameLocations": [],
+                                                    "names": [],
+                                                    "nodeType": "FunctionCall",
+                                                    "src": "550:51:16",
+                                                    "tryCall": false,
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_address_payable",
+                                                        "typeString": "address payable"
+                                                    }
+                                                }
+                                            ],
+                                            "expression": {
+                                                "argumentTypes": [
+                                                    {
+                                                        "typeIdentifier": "t_address_payable",
+                                                        "typeString": "address payable"
+                                                    }
+                                                ],
+                                                "id": 40549,
+                                                "name": "RaceMarathon",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 40924,
+                                                "src": "537:12:16",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_type$_t_contract$_RaceMarathon_$40924_$",
+                                                    "typeString": "type(contract RaceMarathon)"
+                                                }
+                                            },
+                                            "id": 40554,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": true,
+                                            "kind": "typeConversion",
+                                            "lValueRequested": false,
+                                            "nameLocations": [],
+                                            "names": [],
+                                            "nodeType": "FunctionCall",
+                                            "src": "537:65:16",
+                                            "tryCall": false,
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_contract$_RaceMarathon_$40924",
+                                                "typeString": "contract RaceMarathon"
+                                            }
+                                        },
+                                        "src": "526:76:16",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_contract$_RaceMarathon_$40924",
+                                            "typeString": "contract RaceMarathon"
+                                        }
+                                    },
+                                    "id": 40556,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "526:76:16"
+                                }
+                            ]
+                        },
+                        "functionSelector": "0a9254e4",
+                        "id": 40558,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "setUp",
+                        "nameLocation": "500:5:16",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 40546,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "505:2:16"
+                        },
+                        "returnParameters": {
+                            "id": 40547,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "515:0:16"
+                        },
+                        "scope": 40593,
+                        "src": "491:119:16",
+                        "stateMutability": "nonpayable",
+                        "virtual": false,
+                        "visibility": "public"
+                    },
+                    {
+                        "body": {
+                            "id": 40564,
+                            "nodeType": "Block",
+                            "src": "644:27:16",
+                            "statements": [
+                                {
+                                    "expression": {
+                                        "arguments": [],
+                                        "expression": {
+                                            "argumentTypes": [],
+                                            "id": 40561,
+                                            "name": "getFee",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 40592,
+                                            "src": "655:6:16",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
+                                                "typeString": "function ()"
+                                            }
+                                        },
+                                        "id": 40562,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "functionCall",
+                                        "lValueRequested": false,
+                                        "nameLocations": [],
+                                        "names": [],
+                                        "nodeType": "FunctionCall",
+                                        "src": "655:8:16",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_tuple$__$",
+                                            "typeString": "tuple()"
+                                        }
+                                    },
+                                    "id": 40563,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "655:8:16"
+                                }
+                            ]
+                        },
+                        "functionSelector": "c0406226",
+                        "id": 40565,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "run",
+                        "nameLocation": "631:3:16",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 40559,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "634:2:16"
+                        },
+                        "returnParameters": {
+                            "id": 40560,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "644:0:16"
+                        },
+                        "scope": 40593,
+                        "src": "622:49:16",
+                        "stateMutability": "nonpayable",
+                        "virtual": false,
+                        "visibility": "public"
+                    },
+                    {
+                        "body": {
+                            "id": 40591,
+                            "nodeType": "Block",
+                            "src": "704:154:16",
+                            "statements": [
+                                {
+                                    "expression": {
+                                        "arguments": [],
+                                        "expression": {
+                                            "argumentTypes": [],
+                                            "expression": {
+                                                "id": 40568,
+                                                "name": "vm",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 58,
+                                                "src": "715:2:16",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_contract$_Vm_$10004",
+                                                    "typeString": "contract Vm"
+                                                }
+                                            },
+                                            "id": 40570,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": false,
+                                            "lValueRequested": false,
+                                            "memberLocation": "718:14:16",
+                                            "memberName": "startBroadcast",
+                                            "nodeType": "MemberAccess",
+                                            "referencedDeclaration": 8989,
+                                            "src": "715:17:16",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_function_external_nonpayable$__$returns$__$",
+                                                "typeString": "function () external"
+                                            }
+                                        },
+                                        "id": 40571,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "functionCall",
+                                        "lValueRequested": false,
+                                        "nameLocations": [],
+                                        "names": [],
+                                        "nodeType": "FunctionCall",
+                                        "src": "715:19:16",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_tuple$__$",
+                                            "typeString": "tuple()"
+                                        }
+                                    },
+                                    "id": 40572,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "715:19:16"
+                                },
+                                {
+                                    "assignments": [
+                                        40574
+                                    ],
+                                    "declarations": [
+                                        {
+                                            "constant": false,
+                                            "id": 40574,
+                                            "mutability": "mutable",
+                                            "name": "res",
+                                            "nameLocation": "753:3:16",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 40591,
+                                            "src": "745:11:16",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            },
+                                            "typeName": {
+                                                "id": 40573,
+                                                "name": "uint256",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "745:7:16",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            },
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "id": 40579,
+                                    "initialValue": {
+                                        "arguments": [
+                                            {
+                                                "hexValue": "446973636f756e74",
+                                                "id": 40577,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": true,
+                                                "kind": "string",
+                                                "lValueRequested": false,
+                                                "nodeType": "Literal",
+                                                "src": "783:10:16",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_stringliteral_88f9bc1a239619553b98e8bc24166fda63a46fad24867195a5b153cd29d80614",
+                                                    "typeString": "literal_string \"Discount\""
+                                                },
+                                                "value": "Discount"
+                                            }
+                                        ],
+                                        "expression": {
+                                            "argumentTypes": [
+                                                {
+                                                    "typeIdentifier": "t_stringliteral_88f9bc1a239619553b98e8bc24166fda63a46fad24867195a5b153cd29d80614",
+                                                    "typeString": "literal_string \"Discount\""
+                                                }
+                                            ],
+                                            "expression": {
+                                                "id": 40575,
+                                                "name": "marathon",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 40545,
+                                                "src": "759:8:16",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_contract$_RaceMarathon_$40924",
+                                                    "typeString": "contract RaceMarathon"
+                                                }
+                                            },
+                                            "id": 40576,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": false,
+                                            "lValueRequested": false,
+                                            "memberLocation": "768:14:16",
+                                            "memberName": "getEntranceFee",
+                                            "nodeType": "MemberAccess",
+                                            "referencedDeclaration": 40896,
+                                            "src": "759:23:16",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_function_external_pure$_t_string_memory_ptr_$returns$_t_uint256_$",
+                                                "typeString": "function (string memory) pure external returns (uint256)"
+                                            }
+                                        },
+                                        "id": 40578,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "functionCall",
+                                        "lValueRequested": false,
+                                        "nameLocations": [],
+                                        "names": [],
+                                        "nodeType": "FunctionCall",
+                                        "src": "759:35:16",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "nodeType": "VariableDeclarationStatement",
+                                    "src": "745:49:16"
+                                },
+                                {
+                                    "expression": {
+                                        "arguments": [
+                                            {
+                                                "id": 40583,
+                                                "name": "res",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 40574,
+                                                "src": "817:3:16",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            }
+                                        ],
+                                        "expression": {
+                                            "argumentTypes": [
+                                                {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            ],
+                                            "expression": {
+                                                "id": 40580,
+                                                "name": "console",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 18068,
+                                                "src": "805:7:16",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_type$_t_contract$_console_$18068_$",
+                                                    "typeString": "type(library console)"
+                                                }
+                                            },
+                                            "id": 40582,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": false,
+                                            "lValueRequested": false,
+                                            "memberLocation": "813:3:16",
+                                            "memberName": "log",
+                                            "nodeType": "MemberAccess",
+                                            "referencedDeclaration": 10585,
+                                            "src": "805:11:16",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_function_internal_view$_t_uint256_$returns$__$",
+                                                "typeString": "function (uint256) view"
+                                            }
+                                        },
+                                        "id": 40584,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "functionCall",
+                                        "lValueRequested": false,
+                                        "nameLocations": [],
+                                        "names": [],
+                                        "nodeType": "FunctionCall",
+                                        "src": "805:16:16",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_tuple$__$",
+                                            "typeString": "tuple()"
+                                        }
+                                    },
+                                    "id": 40585,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "805:16:16"
+                                },
+                                {
+                                    "expression": {
+                                        "arguments": [],
+                                        "expression": {
+                                            "argumentTypes": [],
+                                            "expression": {
+                                                "id": 40586,
+                                                "name": "vm",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 58,
+                                                "src": "832:2:16",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_contract$_Vm_$10004",
+                                                    "typeString": "contract Vm"
+                                                }
+                                            },
+                                            "id": 40588,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": false,
+                                            "lValueRequested": false,
+                                            "memberLocation": "835:13:16",
+                                            "memberName": "stopBroadcast",
+                                            "nodeType": "MemberAccess",
+                                            "referencedDeclaration": 9002,
+                                            "src": "832:16:16",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_function_external_nonpayable$__$returns$__$",
+                                                "typeString": "function () external"
+                                            }
+                                        },
+                                        "id": 40589,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "functionCall",
+                                        "lValueRequested": false,
+                                        "nameLocations": [],
+                                        "names": [],
+                                        "nodeType": "FunctionCall",
+                                        "src": "832:18:16",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_tuple$__$",
+                                            "typeString": "tuple()"
+                                        }
+                                    },
+                                    "id": 40590,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "832:18:16"
+                                }
+                            ]
+                        },
+                        "functionSelector": "ced72f87",
+                        "id": 40592,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "getFee",
+                        "nameLocation": "688:6:16",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 40566,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "694:2:16"
+                        },
+                        "returnParameters": {
+                            "id": 40567,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "704:0:16"
+                        },
+                        "scope": 40593,
+                        "src": "679:179:16",
+                        "stateMutability": "nonpayable",
+                        "virtual": false,
+                        "visibility": "public"
+                    }
+                ],
+                "scope": 40594,
+                "src": "422:604:16",
+                "usedErrors": []
+            }
+        ],
+        "src": "40:988:16"
+    },
+    "functionHashes": {
+        "IS_SCRIPT()": "f8ccbf47",
+        "getFee()": "ced72f87",
+        "run()": "c0406226",
+        "setUp()": "0a9254e4"
+    },
+    "gasEstimates": {
+        "creation": {
+            "codeDepositCost": "154000",
+            "executionCost": "24426",
+            "totalCost": "178426"
+        },
+        "external": {
+            "IS_SCRIPT()": "2353",
+            "getFee()": "infinite",
+            "run()": "infinite",
+            "setUp()": "24334"
+        }
+    }
+}
