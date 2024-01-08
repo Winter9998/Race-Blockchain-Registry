@@ -42,7 +42,7 @@ contract RaceMarathon {
         uint _age,
         bool _license,
         uint _typeRace
-        );
+    );
 
     RaceType public raceType;
     mapping (address => bool) public isRegistered;
@@ -51,7 +51,6 @@ contract RaceMarathon {
     uint public runnersNumber = 0;
     uint public immutable REQUIRED_ETHER = 2 ether;
     uint public immutable REQUIRED_ETHER_DISCOUNT =  1.5 ether; /// @dev Discount for minors.
-    RaceType public raceType;
 
     /// @dev Receive and fallback function to accept incoming payments.
     receive() external payable {}
@@ -107,6 +106,23 @@ contract RaceMarathon {
         delete isRegistered[msg.sender];
     }
 
+    function getrunnersNumber() public view returns(uint){
+        return runnersNumber;
+    }
+
+    function getEntranceFee(string memory _type) public pure returns(uint){
+        if (keccak256(abi.encodePacked(_type)) == keccak256(abi.encodePacked("Normal"))){
+            return REQUIRED_ETHER;
+        } else if(keccak256(abi.encodePacked(_type)) == keccak256(abi.encodePacked("Discount"))){
+            return REQUIRED_ETHER_DISCOUNT;
+        } else {
+            return 1;
+        }
+    }
+
+    function getRunnersArray(uint256 index) public view {
+
+    }
     
 
 
