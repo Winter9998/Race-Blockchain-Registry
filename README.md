@@ -9,10 +9,10 @@ To clone and run this application, you'll need [Git](https://git-scm.com), [Foun
 
 ```bash
 # Clone this repository
-git clone <repository_link>
+git clone https://github.com/Winter9998/DecentralizedRaceRegister.git
 
 # Go into the repository
-cd <repository_name>
+cd DecentralizedRaceRegister.git
 
 # Install dependencies
 forge install
