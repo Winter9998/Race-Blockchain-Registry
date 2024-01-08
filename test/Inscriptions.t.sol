@@ -3,7 +3,6 @@ pragma solidity ^0.8.15;
 
 import {Test} from "forge-std/Test.sol";
 import "forge-std/console.sol";
-
 import "../src/RaceMarathon.sol";
 
 contract InscriptionsTesting is Test {
@@ -11,6 +10,7 @@ contract InscriptionsTesting is Test {
     RaceMarathon marathon;
     address fuzz1 = makeAddr("AM");
     string public DEFAULT_NAME = "Arthur Morgan";
+
     
     
     function setUp() public {
@@ -51,6 +51,13 @@ contract InscriptionsTesting is Test {
     // Convert 3 ether to wei for comparison
     uint256 threeEtherInWei = 3 * 10**18;
     assertEq(address(marathon).balance, threeEtherInWei);
+    }
+
+    function testgetFunctions() public {
+        registerFuzz1();
+        assertEq(marathon.getrunnersNumber(fuzz1),1);
+        console.log(marathon.getEntranceFee("Discount"), 1.5 ether);
+
     }
 
 }

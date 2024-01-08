@@ -9,7 +9,7 @@
 */
 
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.9;
+pragma solidity ^0.8.15;
 
 /// @dev Custom errors for better readability.
 error ErrorTerminate (string message);
@@ -106,8 +106,12 @@ contract RaceMarathon {
         delete isRegistered[msg.sender];
     }
 
-    function getrunnersNumber() public view returns(uint){
-        return runnersNumber;
+    function getrunnersNumber(address addr) public view returns(uint){
+        return runnerNumber[addr];
+    }
+    
+    function getRaceTypes() public view returns(RaceType){
+        return raceType;
     }
 
     function getEntranceFee(string memory _type) public pure returns(uint){
@@ -120,8 +124,9 @@ contract RaceMarathon {
         }
     }
 
-    function getRunnersArray(uint256 index) public view {
-
+    function getRunnersArray(address addr,uint256 index) public view returns(Runner memory){
+        require(index < runners[addr].length, "Out of bounds");
+        return runners[addr][index];
     }
     
 
