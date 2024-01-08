@@ -42,4 +42,15 @@ contract InscriptionsTesting is Test {
         marathon.cancelRace();
         assertEq(marathon.isRegistered(fuzz1), false);
     }
+
+    function testCallDataisReceived() public {
+    // bytes memory data = abi.encodeWithSignature("setNumber(uint)", 123);
+    (bool success, ) = address(marathon).call{value: 3 ether}("");
+    require(success, "Call to marathon contract failed");
+
+    // Convert 3 ether to wei for comparison
+    uint256 threeEtherInWei = 3 * 10**18;
+    assertEq(address(marathon).balance, threeEtherInWei);
+    }
+
 }

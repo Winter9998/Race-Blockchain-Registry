@@ -44,6 +44,7 @@ contract RaceMarathon {
         uint _typeRace
         );
 
+    RaceType public raceType;
     mapping (address => bool) public isRegistered;
     mapping (address => uint) public runnerNumber;
     mapping (address => Runner[]) public runners;
@@ -105,6 +106,8 @@ contract RaceMarathon {
         delete runners[msg.sender];
         delete isRegistered[msg.sender];
     }
+
+    
 
 
 }
