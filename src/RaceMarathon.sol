@@ -72,13 +72,13 @@ contract RaceMarathon {
         }
 
         // Convert _typeRace to the corresponding enum value based on its integer value
-        if (_typeRace == 1) {
+        if (_typeRace == 10) {
             raceType = RaceType.Race10;
-        } else if (_typeRace == 2) {
+        } else if (_typeRace == 12) {
             raceType = RaceType.Race12;
-        } else if (_typeRace == 3) {
+        } else if (_typeRace == 21) {
             raceType = RaceType.Race21;
-        } else if (_typeRace == 4) {
+        } else if (_typeRace == 42) {
             raceType = RaceType.Race42;
         } else {
             revert();
